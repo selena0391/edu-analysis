@@ -19,3 +19,9 @@ state_data = [state for state in state_data if state ["AVG_MATH_4_SCORE"] != ""]
 #displaying how many rows the data containes after filtering
 print(len(state_data))
 
+# function that returns a list that contains data according to two given parameters state and column
+# when retrieving data with the column key, dictionaries with an empty value at the key are not added to the list
+def filter(state, column):
+    state_data = [sta for sta in list_data if sta["STATE"] == state and sta[column] != ""]
+    return state_data
+
